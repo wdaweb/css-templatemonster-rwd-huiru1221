@@ -1,0 +1,1981 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/bootstrap-grid.css">
+  <link rel="stylesheet" href="./fontawesome-free-6.4.0-web/css/all.min.css">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700;800;900;1000&family=Press+Start+2P&family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700;800;900;1000&family=Open+Sans:wght@300;400;500;600;700;800&family=Press+Start+2P&family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+
+    }
+
+    body {
+      font-family: "Open Sans", sans-serif;
+      ;
+    }
+
+    #sectionOne {
+
+      /* position: fixed; 若未用 top: 0; 則會被 margin-top: 80px; 往下推*/
+      position: fixed;
+      top: 0;
+      background: white;
+      width: 100%;
+      font-family: 'Raleway', sans-serif;
+      font-weight: 600;
+      font-size: 16px;
+      z-index: 999;
+      height: 80px;
+    }
+
+
+
+    #sectionOne .row {
+      width: 100%;
+      height: 100%;
+    }
+
+    #sectionOne li {
+      padding: 0 5px;
+    }
+
+    #cart {
+      position: relative;
+    }
+
+    #cartNum {
+      width: 15px;
+      height: 15px;
+      font-size: 12px;
+      background: #ffbe00;
+      text-align: center;
+      line-height: 15px;
+      border-radius: 50%;
+      position: absolute;
+      top: -9px;
+      left: 12px;
+    }
+
+    #menu {
+      display: none;
+
+    }
+
+    #menu li {
+      line-height: 30px;
+    }
+
+    /*** sectionTwo ***/
+
+    .swiper {
+      width: 100%;
+      height: 100%;
+    }
+
+    .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover
+    }
+
+    .swiper-button-next {
+      width: 50px;
+      height: 50px;
+      color: #fff;
+      background: #ffbe00;
+    }
+
+    .swiper-button-prev {
+      width: 50px;
+      height: 50px;
+      color: #fff;
+      background: #ffbe00;
+    }
+
+    .swiper-pagination {
+      color: #ffbe00;
+    }
+
+    #sectionTwo {
+      /* width: 100vw; */
+      height: 523px;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(./image/hero-2.jpg);
+      position: relative;
+    }
+
+    #sectionTwoText {
+      width: 70%;
+      height: 423px;
+      color: white;
+      z-index: 1;
+      font-family: 'Open Sans', sans-serif;
+      text-align: left;
+    }
+
+    .swiper-button-prev,
+    .swiper-button-next {
+      display: none;
+    }
+
+    #sectionTwoText h2 {
+      font-size: 20px;
+      font-weight: 400;
+
+    }
+
+    #sectionTwoText h1 {
+      font-size: 35px;
+      line-height: 35px;
+    }
+
+    #sectionTwoText p {
+      height: 40px;
+      font-size: 16px;
+      line-height: 28px;
+    }
+
+    #sectionTwoText a {
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+      font-size: 14px;
+    }
+
+    #sectionTwoText .btn {
+      width: 150px;
+      height: 50px;
+      line-height: 50px;
+      background: #ffbe00;
+      position: absolute;
+      text-align: center;
+      top: 450px;
+      left: 47px;
+    }
+
+    .circle {
+      width: 100px;
+      height: 10px;
+      position: absolute;
+      top: 476px;
+      left: 166px;
+    }
+
+    .circle .circleOne {
+      width: 10px;
+      height: 10px;
+      border: 2px solid #ffbe00;
+      border-radius: 50%;
+    }
+
+    .circle .circleTwo {
+      width: 20px;
+      height: 10px;
+      background: #ffbe00;
+      border-radius: 50px;
+    }
+
+    /*** sectionThree ***/
+
+    #sectionThree {
+      padding: 50px 0;
+    }
+
+    #sectionThree .row {
+      width: 300px;
+      margin: auto;
+    }
+
+    #sectionThree img {
+      width: 100%;
+    }
+
+    #sectionThree h3 {
+      font-size: 24px;
+      font-weight: 400;
+    }
+
+    #sectionThree span {
+      font-size: 32px;
+      margin-right: 5px;
+      font-weight: 700;
+    }
+
+    #sectionThree .col-12:nth-child(2) {
+      margin-top: 30px
+    }
+
+    #sectionThree .col-12:nth-child(3) {
+      margin-top: 30px
+    }
+
+    #sectionThree .col-12:nth-child(4) {
+      margin-top: 15px
+    }
+
+    #sectionThree .col-12:nth-child(4) p {
+      margin-bottom: 20px;
+    }
+
+    #sectionThree .row p {
+      color: #666;
+      line-height: 28px;
+    }
+
+    #sectionThree .btn {
+      display: block;
+      width: 150px;
+      height: 50px;
+      line-height: 50px;
+      background: #ffbe00;
+      text-align: center;
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+      font-size: 14px;
+    }
+
+
+    /*** sectionFour ***/
+
+    #sectionFour {
+      padding: 50px 10px;
+      color: white;
+      background-image: url("https://danslacuisinededede.com/kon/assets/images/bg/funfact-bg.jpg");
+    }
+
+    #sectionFour .row h2 {
+      font-size: 24px;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+
+
+    #sectionFour .row img {
+      margin-right: 20px;
+    }
+
+    .FourIcon {
+      width: 40px;
+    }
+
+    #sectionFour .content {
+      width: 200px;
+      line-height: 28px;
+    }
+
+    #sectionFour .row .col-12 {
+      margin-bottom: 60px;
+    }
+
+    /*** sectionFive ***/
+
+    #sectionFive {
+      padding: 50px 0;
+    }
+
+    #sectionFive .container {
+      text-align: center;
+    }
+
+    #sectionFive .container>p {
+      margin-top: 15px;
+      margin-bottom: 60px;
+    }
+
+    #sectionFive .card {
+      border: 1px solid #eeeeee;
+      padding: 70px 40px;
+      margin-bottom: 30px;
+    }
+
+    #sectionFive .card>img {
+      width: 100%;
+      margin-bottom: 30px;
+    }
+
+    #sectionFive .card>h3 {
+      margin-bottom: 25px;
+      font-size: 24px;
+      font-weight: 600;
+    }
+
+    #sectionFive .card>p {
+      margin-bottom: 16px;
+      font-size: 15px;
+      color: #666;
+
+    }
+
+    #sectionFive .card .FiveBottom>a {
+      text-decoration: none;
+      color: #1f2d30;
+
+    }
+
+    /*** sectionSix ***/
+
+    #sectionSix {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("https://danslacuisinededede.com/kon/assets/images/bg/funfact-bg.jpg");
+      padding: 50px 0px 20px 0px;
+      /* height: 456px; */
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center center;
+    }
+
+    #sectionSix .container {
+      max-width: 300px;
+      margin: 0px 45px;
+      padding: 0px 15px;
+    }
+
+    #sectionSix .col-6 {
+      text-align: center;
+      color: #fff;
+      margin-bottom: 30px;
+      padding: 0px 15px;
+    }
+
+    #sectionSix .col-6>h1 {
+      font-size: 50px;
+      margin-bottom: 10px;
+    }
+
+    #sectionSix .col-6>img {
+      margin-bottom: 10px;
+    }
+
+
+
+    /*** sectionSeven ***/
+
+    #sectionSeven {
+      padding: 50px 0px 20px 0px;
+    }
+
+    #sectionSeven .container {
+      padding: 0px 15px;
+      margin: auto;
+      max-width: 300px;
+    }
+
+    #sectionSeven .row1 {
+      margin: 0px -15px 60px -15px;
+    }
+
+    #sectionSeven .row1 h1 {
+      font-size: 24px;
+      font-weight: 700;
+      padding-top: 50px;
+    }
+
+    #sectionSeven .row1 p {
+      margin-top: 15px;
+      font-size: 15px;
+      color: #666;
+    }
+
+    #sectionSeven .sevenText {
+      padding: 0px 15px;
+      text-align: center;
+    }
+
+    #sectionSeven .sevenBox {
+      margin-bottom: 60px;
+    }
+
+    #sectionSeven .row2 {
+      margin: 0px -15px;
+    }
+
+    #sectionSeven .sevenMenu {
+      padding: 0px 12px;
+      margin-bottom: 20px;
+    }
+
+    #sectionSeven .sevenMenu .menuBtn {
+      margin: 0px 10px 10px 10px;
+      padding-bottom: 5px;
+      color: #1f2d30;
+      text-transform: capitalize;
+      font-size: 14px;
+      font-weight: 600;
+      border: none;
+      background-color: transparent;
+      line-height: 1;
+    }
+
+    #sectionSeven .row3 .col-12 {
+      margin-bottom: 30px;
+      padding: 0px 15px;
+    }
+
+    #sectionSeven .row3 img {
+      width: 100%;
+    }
+
+    /*** sectionEight ***/
+
+    #sectionEight {
+      padding: 50px 0px 20px 0px;
+    }
+
+    #sectionEight .container {
+      padding: 0px 15px;
+      margin: auto;
+      max-width: 300px;
+    }
+
+    #sectionEight .row1 {
+      margin: 0px -12px 60px -12px;
+    }
+
+    #sectionEight .eightText {
+      text-align: center;
+      padding: 0px 12px;
+    }
+
+    #sectionEight .eightText h1 {
+      font-size: 24px;
+      font-weight: 700;
+      line-height: 1;
+    }
+
+    #sectionEight .eightText p {
+      margin-top: 15px;
+      font-size: 15px;
+      line-height: 28px;
+      color: #666666;
+    }
+
+    #sectionEight .row2 {
+      margin: 0px -12px;
+    }
+
+    #sectionEight .row2 .col-12 {
+      padding: 0px 12px;
+      margin-bottom: 30px;
+    }
+
+    #sectionEight .row2 .team {
+      border: 1px solid #eeeeee;
+    }
+
+    #sectionEight .row2 .team img {
+      width: 100%;
+    }
+
+    #sectionEight .row2 .eightContent {
+      text-align: center;
+      padding: 25px 20px 30px;
+    }
+
+    #sectionEight .row2 .title {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    #sectionEight .row2 span {
+      display: block;
+      line-height: 18px;
+      margin-bottom: 5px;
+      color: #666;
+    }
+
+    #sectionEight .row2 a {
+      display: block;
+      line-height: 18px;
+      margin-bottom: 5px;
+      color: #666;
+      text-decoration: none;
+    }
+
+    #sectionEight .row2 .social a {
+      width: 30px;
+      height: 30px;
+      padding: 5px;
+      text-align: center;
+      border-radius: 50px;
+      display: block;
+      border: 1px solid #ffbe00;
+      margin-top: 10px;
+      margin-right: 10px;
+    }
+
+    #sectionEight .row2 .social .facebook {
+      border-color: #4867AA;
+      color: #4867AA;
+    }
+
+    #sectionEight .row2 .social .twitter {
+      border-color: #1DA1F2;
+      color: #1DA1F2;
+    }
+
+    #sectionEight .row2 .social .linkedin {
+      border-color: #007BB6;
+      color: #007BB6;
+    }
+
+    #sectionEight .row2 .social .google {
+      border-color: #DD5144;
+      color: #DD5144;
+    }
+
+    /*** sectionNine ***/
+
+    #sectionNine {
+      padding: 50px 0px 20px 0px;
+      background-image: url("https://danslacuisinededede.com/kon/assets/images/bg/patern-1.png");
+      background-color: #f8f8f8;
+    }
+
+    #sectionNine .container {
+      padding: 0px 15px;
+      margin: auto;
+      max-width: 300px;
+      color: #666666;
+    }
+
+    #sectionNine .row1 {
+      margin: 0px -15px 30px -15px;
+      text-align: center;
+    }
+
+    #sectionNine .row1 .col-12 {
+      padding: 0px 15px;
+    }
+
+    #sectionNine .row1 h1 {
+      padding-top: 50px;
+      color: #1f2d30;
+    }
+
+    #sectionNine .row1 p {
+      margin-top: 15px;
+      margin-bottom: 50px;
+    }
+
+    #sectionNine .row1 img {
+      opacity: 0.2;
+    }
+
+    #sectionNine .row2 {
+      margin: 0px -15px 30px -15px;
+      text-align: center;
+    }
+
+    #sectionNine .row2 p {
+      font-size: 18px;
+      font-style: italic;
+      line-height: 32px;
+      margin-bottom: 25px;
+    }
+
+    #sectionNine .row2 h4 {
+      font-size: 20px;
+      color: #ffbe00;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+
+    #sectionNine .row2 span {
+      font-size: 14px;
+      display: block;
+      line-height: 1;
+      margin-bottom: 50px;
+    }
+
+    #sectionNine .row2 img {
+      margin: 0px 10px;
+    }
+
+    #sectionNine .row2 img:nth-child(2) {
+      width: 120px;
+      border-radius: 50%;
+    }
+
+    #sectionNine .row2 img:nth-child(1),
+    #sectionNine .row2 img:nth-child(3) {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+    }
+
+    /*** sectionTen ***/
+
+    #sectionTen {
+      padding: 50px 0px 50px 0px;
+    }
+
+    #sectionTen .container {
+      padding: 0px 15px;
+      margin: auto;
+      max-width: 300px;
+    }
+
+    #sectionTen .ten {
+      margin: 0px -12px 60px -12px;
+    }
+
+    #sectionTen .tenText {
+      text-align: center;
+
+    }
+
+    #sectionTen .tenText h1 {
+      font-size: 24px;
+      font-weight: 700;
+      line-height: 1;
+    }
+
+    #sectionTen .tenText p {
+      margin-top: 15px;
+      font-size: 15px;
+      line-height: 28px;
+      color: #666666;
+      margin-bottom: 60px;
+    }
+
+    #sectionTen .row2 {
+      margin: 0px -15px;
+    }
+
+    #footerTop .row2 .card {
+      padding: 0px 15px;
+      margin-bottom: 40px;
+    }
+
+    #sectionTen .row2 .card img {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+
+    #sectionTen .row2 .card h3 {
+      margin-bottom: 10px;
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 18px;
+      text-transform: capitalize;
+      color: #666;
+    }
+
+    #sectionTen .row2 .card p {
+      font-size: 20px;
+      font-weight: 600;
+      line-height: 1;
+    }
+
+    #sectionTen .row2 .card:nth-child(2),
+    #sectionTen .row2 .card:nth-child(3) {
+      display: none;
+    }
+
+    /*** sectionEleven ***/
+
+    #sectionEleven {
+      background-color: #f8f8f8;
+      padding: 80px 0px;
+    }
+
+    #sectionEleven .container {
+      padding: 0px 15px;
+      margin: auto;
+    }
+
+    #sectionEleven .row {
+      margin: 0px -15px;
+      padding: 0px 20px;
+    }
+
+    #sectionEleven .row img {
+      width: 100%;
+    }
+
+    #sectionEleven .row .col-6:nth-child(3),
+    #sectionEleven .row .col-6:nth-child(4) {
+      display: none;
+    }
+
+
+
+    /*** footer ***/
+
+    #footer {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("https://danslacuisinededede.com/kon/assets/images/bg/footer-bg.jpg");
+      color: #fff;
+    }
+
+    #footer a {
+      color: #fff;
+    }
+
+    #footerTop {
+      padding: 50px 0px 10px 0px;
+    }
+
+    #footerTop .container {
+      margin: auto;
+      padding: 0px 15px;
+      max-width: 300px;
+    }
+
+    #footerTop .container .row {
+      padding: 0px -15px;
+    }
+
+    #footerTop .row .col-12 {
+      padding: 0px 15px;
+      margin-bottom: 40px;
+    }
+
+    #footerTop .row .topOne .footerLogo {
+      width: 120px;
+    }
+
+    #footerTop .row .topOne .footerLogo a {
+      text-decoration: none;
+    }
+
+    #footerTop .row .topOne .footerLogo img {
+      max-width: 100%;
+      margin-bottom: 18px;
+    }
+
+    #footerTop .row .footerSocial a {
+      text-align: center;
+      margin-top: 5px;
+      margin-right: 15px;
+      text-decoration: none;
+    }
+
+    #footerTop .row .footerSocial a i {
+      display: block;
+      font-size: 14px;
+      line-height: 20px;
+    }
+
+    #footerTop .row .title {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      font-size: 24px;
+      font-weight: 600;
+      color: #d8d8d8;
+      text-transform: capitalize;
+      margin-bottom: 30px;
+    }
+
+    #footerTop .row ul {
+      list-style: outside none none;
+    }
+
+    #footerTop .row .topTwo ul li {
+      color: #d8d8d8;
+      display: flex;
+      font-size: 14px;
+      line-height: 22px;
+      margin-bottom: 12px;
+    }
+
+    #footerTop .row .topTwo i {
+      margin-right: 15px;
+      line-height: 28px;
+      font-size: 18px;
+    }
+
+    #footerTop .row .topTwo span a {
+      text-decoration: none;
+    }
+
+    #footerTop .row .topThree ul {
+      margin: -5px;
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    #footerTop .row .topThree li {
+      padding: 5px;
+      max-width: 33.3333%;
+    }
+
+    #footerTop .row .topThree li a {
+      display: block;
+    }
+
+    #footerTop .row .topThree li a img {
+      width: 100%;
+    }
+
+    #footerTop .row .topFour p {
+      color: #d8d8d8;
+      max-width: 270px;
+      line-height: 23px;
+      font-size: 14px;
+    }
+
+
+    @media(min-width:768px) {
+      #sectionOne {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        height: 80px;
+        font-size: 20px;
+      }
+
+      #menu {
+        display: none;
+      }
+
+      #hamBurger {
+        display: block;
+      }
+
+      /*** sectionTwo ***/
+
+      #sectionTwo {
+        height: 440px;
+      }
+
+      #sectionTwoText {
+        padding-top: 40px;
+      }
+
+      #sectionTwoText h2 {
+        font-size: 30px;
+        font-weight: 500;
+
+      }
+
+      #sectionTwoText h1 {
+        font-size: 50px;
+      }
+
+      #sectionTwoText p {
+        width: 650px;
+        height: 40px;
+        font-size: 16px;
+        line-height: 28px;
+      }
+
+      /*** sectionThree ***/
+
+      #sectionThree {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      #sectionThree .row {
+        width: 100%;
+      }
+
+      #sectionThree .col-12:nth-child(2) {
+        margin-top: 0px
+      }
+
+      #sectionThree h1 {
+        font-size: 36px;
+        font-weight: 400;
+        font-family: 'Raleway', sans-serif;
+      }
+
+      #sectionThree span {
+        font-size: 48px;
+      }
+
+
+      /*** sectionFour ***/
+
+      #sectionFour {
+        background-size: 180%;
+      }
+
+      .FourIcon {
+        width: 50px;
+      }
+
+      #sectionFive {
+        padding: 60px 0 30px 0;
+      }
+
+      #sectionFour .content {
+        width: 260px;
+      }
+
+      #sectionFive .container>p {
+        width: 500px;
+      }
+
+      /*** sectionSix ***/
+
+      #sectionSix {
+        padding: 60px 0px 30px 0px;
+      }
+
+      #sectionSix .container {
+        padding: 0px 15px;
+        margin: 0px auto;
+        max-width: 720px;
+      }
+
+      /*** sectionSeven ***/
+      #sectionSeven .container {
+        padding: 0px 15px;
+        margin: auto;
+        max-width: 720px;
+      }
+
+      #sectionSeven .row1 h1 {
+        margin-top: 50px;
+        font-size: 34px;
+        line-height: 1;
+      }
+
+      #sectionSeven .row1 p {
+        max-width: 500px;
+        margin: 15px 95px 0px 95px;
+        line-height: 26px;
+
+      }
+
+      /*** sectionEight ***/
+
+      #sectionEight {
+        padding: 60px 0px 30px 0px;
+      }
+
+      #sectionEight .container {
+        padding: 0px 15px;
+        margin: auto;
+        max-width: 720px;
+      }
+
+      #sectionEight .row1 {
+        margin: 0px -12px 60px -12px;
+      }
+
+      #sectionEight .row1 h1 {
+        padding-top: 50px;
+        font-size: 34px;
+      }
+
+      #sectionEight .row1 p {
+        max-width: 500px;
+        margin: 15px auto 0px auto;
+        line-height: 26px;
+      }
+
+      /*** sectionNine ***/
+
+      #sectionNine .container {
+        max-width: 720px;
+      }
+
+      #sectionNine .row1 p {
+        max-width: 500px;
+        margin: 15px auto 60px auto;
+      }
+
+      #sectionNine .row2 p {
+        max-width: 570px;
+        margin: 15px auto 60px auto;
+      }
+
+      /*** sectionTen ***/
+
+      #sectionTen .container {
+        max-width: 720px;
+      }
+
+      #sectionTen .row1 h1 {
+        font-weight: 700;
+        font-size: 34px;
+        line-height: 1;
+      }
+
+      #sectionTen .row1 p {
+        max-width: 500px;
+        margin: 15px auto 60px auto;
+      }
+
+      #sectionTen .row2 .card {
+        width: 350px;
+        margin: 0px 10px
+      }
+
+      #sectionTen .row2 .card:nth-child(2) {
+        display: block;
+      }
+
+      /*** sectionEleven ***/
+
+      #sectionEleven {
+        background-color: #f8f8f8;
+        padding: 60px 0px;
+      }
+
+      #sectionEleven .row {
+        margin: 0px;
+        padding: 0px;
+      }
+
+      #sectionEleven .row .col-6:nth-child(3),
+      #sectionEleven .row .col-6:nth-child(4) {
+        display: block;
+      }
+
+      /*** footerTop ***/
+
+      #footerTop .container {
+        max-width: 720px;
+      }
+
+      #footerTop .row .topOne img {
+        max-width: 100%;
+      }
+
+    }
+
+
+
+    @media(min-width:992px) {
+      #menu {
+        display: block;
+        margin-left: 10px;
+      }
+
+      #menu li {
+        list-style: none;
+      }
+
+      #hamBurger {
+        display: none;
+      }
+
+      /*** sectionTwo ***/
+
+      #sectionTwo {
+        height: 440px;
+      }
+
+      #sectionTwoText h2 {
+        font-size: 30px;
+        font-weight: 500;
+
+      }
+
+      #sectionTwoText h1 {
+        font-size: 60px;
+      }
+
+      #sectionTwoText p {
+        width: 650px;
+        height: 40px;
+        font-size: 16px;
+        line-height: 28px;
+      }
+
+      #sectionTwoText .btn {
+        top: 300px;
+
+      }
+
+      .swiper-button-prev,
+      .swiper-button-next {
+        display: block;
+      }
+
+      /*** sectionThree ***/
+
+      #sectionThree {
+        display: flex;
+        justify-content: space-between;
+        padding: 80px 0px;
+
+      }
+
+      #sectionThree .row {
+        width: 100%;
+        height: 530px;
+      }
+
+      #sectionThree .col-12 {
+        margin-top: 0px !important;
+        padding: 0;
+      }
+
+      #sectionThree .col-12:nth-child(3) {
+        order: -1;
+        padding-right: 70px;
+      }
+
+      #sectionThree .col-12:nth-child(4) {
+        padding-left: 70px;
+      }
+
+      #sectionThree h1 {
+        font-size: 36px;
+        font-weight: 400;
+        font-family: 'Raleway', sans-serif;
+      }
+
+      #sectionThree span {
+        font-size: 48px;
+      }
+
+      #sectionThree img {
+        height: 304px;
+      }
+
+
+      /*** sectionFour ***/
+
+      #sectionFour {
+        padding-top: 80px;
+
+      }
+
+      #sectionFour .content {
+        width: 300px;
+      }
+
+      /*** sectionFive ***/
+
+      #sectionFive {
+        padding: 80px 0 50px 0;
+      }
+
+      #sectionFive .container {
+        justify-content: space-around;
+      }
+
+      #sectionFive h1 {
+        margin-top: 50px
+      }
+
+      #sectionFive .container>p {
+        height: 52px;
+        line-height: 26px;
+
+      }
+
+      /*** sectionSix ***/
+
+      #sectionSix {
+        padding: 80px 0px 50px 0px;
+      }
+
+      #sectionSix .container {
+        padding: 0px 15px;
+        margin: auto;
+        max-width: 1200px;
+      }
+
+      #sectionSix .col-6>h1 {
+        margin-bottom: 15px;
+      }
+
+      #sectionSix .col-6>img {
+        margin-bottom: 20px;
+      }
+
+      /*** sectionSeven ***/
+
+      #sectionSeven {
+        padding: 80px 0px 50px 0px;
+      }
+
+      #sectionSeven .container {
+        max-width: 1200px;
+      }
+
+      #sectionSeven .row1 {
+        margin: 0px -15px 60px -15px;
+      }
+
+      #sectionSeven .row1 p {
+        margin: 15px 335px 0px 335px;
+        line-height: 26px;
+      }
+
+      #sectionSeven .row3 {
+        height: 600px;
+      }
+
+      /*** sectionEight ***/
+
+      #sectionEight .container {
+        max-width: 1200px;
+      }
+
+      /*** sectionNine ***/
+
+      #sectionNine .row1 h1 {
+        font-size: 36px;
+      }
+
+      #sectionNine .row2 p {
+        max-width: 700px;
+        margin: 15px auto 30px auto;
+      }
+
+      /*** sectionTen ***/
+
+      #sectionTen .container {
+        max-width: 1200px;
+      }
+
+      #sectionTen .row1 h1 {
+        font-weight: 700;
+        font-size: 34px;
+        line-height: 1;
+      }
+
+      #sectionTen .row1 p {
+        max-width: 500px;
+        margin: 15px auto 60px auto;
+      }
+
+      #sectionTen .row2 .card {
+        width: 350px;
+        margin: 0px 10px
+      }
+
+      #sectionTen .row2 .card:nth-child(3) {
+        display: block;
+      }
+
+
+
+      /*** footerTop ***/
+
+      #footerTop .container {
+        max-width: 1200px;
+      }
+
+      #footerTop .row .topOne img {
+        max-width: 100%;
+      }
+
+    }
+  </style>
+</head>
+
+<body>
+  <div id="sectionOne">
+    <div class="container-fluid" style="height: 100%;">
+      <div class="row align-items-center mx-auto">
+        <div class="col-1 me-auto">
+          <img src="https://danslacuisinededede.com/kon/assets/images/logo-dark.png">
+        </div>
+        <div id="menu" class="col-auto">
+          <ul class="d-flex ">
+            <li class="px-md-2">Home</li>
+            <li class="px-md-2">About</li>
+            <li class="px-md-2">Service</li>
+            <li class="px-md-2">Project</li>
+            <li class="px-md-2">Team</li>
+            <li class="px-md-2">Shop</li>
+            <li class="px-md-2">Blog</li>
+            <li class="px-md-2">Contact</li>
+          </ul>
+        </div>
+        <div class="col-1 col-lg-auto" style="text-align: center;">
+          <i class="fa-solid fa-magnifying-glass" style="color: #1f2d30;"></i>
+        </div>
+        <div class="col-1 col-lg-auto" style="text-align: center;">
+          <i id="cart" class="fa-solid fa-cart-shopping" style="color: #1f2d30;">
+            <div id="cartNum">3</div>
+          </i>
+
+        </div>
+        <div class="col-1 col-lg-auto" style="text-align: center;">
+          <div><i id="hamBurger" class="fa-solid fa-bars" style="color: #1f2d30;"></i></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="sectionTwo" class="swiper" style="margin-top: 80px;">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide"
+        style="background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('./image/hero-1.jpg')">
+        <div id="sectionTwoText" class="m-5">
+          <h2 class="py-3">Science 1968</h2>
+          <h1>We Build The Trust.</h1>
+          <p class="py-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat corrupti delectus molestiae
+            aliquid eum
+            laborum? Dicta repudiandae accusantium tempora eius necessitatibus quas est veritatis, eveniet nostrum
+            obcaecati
+            alias! Sequi, ad!</p>
+          <div class="btn"><a href="#">EXPLORE NOW</a></div>
+        </div>
+      </div>
+      <div class="swiper-slide"
+        style="background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('./image/hero-2.jpg')">
+        <div id="sectionTwoText" class="m-5">
+          <h2 class="py-3">Science 1968</h2>
+          <h1>We Build The Trust.</h1>
+          <p class="py-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat corrupti delectus molestiae
+            aliquid eum
+            laborum? Dicta repudiandae accusantium tempora eius necessitatibus quas est veritatis, eveniet nostrum
+            obcaecati
+            alias! Sequi, ad!</p>
+          <div class="btn"><a href="#">EXPLORE NOW</a></div>
+        </div>
+      </div>
+    </div>
+    <!-- Add Pagination -->
+    <div class="swiper-pagination"></div>
+    <!-- Add Navigation -->
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+  </div>
+
+  <div id="sectionThree">
+    <div class="container">
+      <div class="row flex-lg-column">
+        <div class="col-12 col-md-6 order-lg-1">
+          <img src="https://danslacuisinededede.com/kon/assets/images/about/about-1.jpg">
+        </div>
+        <div class="col-12 col-md-6">
+          <img src="https://danslacuisinededede.com/kon/assets/images/about/about-2.jpg">
+        </div>
+        <div class="col-12 col-lg-6">
+          <h3 style="margin-bottom: 30px"><span>50</span>Years of Experience</h3>
+          <p>ligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas
+            assumenda
+            est, omnis dolor ellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum atibus saepe
+            eveniet
+            ut et voluptates repudiandae sint et molestiae
+          </p>
+        </div>
+        <div class="col-12 col-lg-6 order-lg-2">
+          <p>
+            ligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas
+            assumenda
+            est, omnis dolor ellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum atibus saepe eveniet
+            ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapie
+          </p>
+          <div><a href="#" class="btn">CONTACT US</a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <div id="sectionFour">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-md-6 col-lg-4 d-flex justify-content-center">
+          <div>
+            <img class="FourIcon" src="https://danslacuisinededede.com/kon/assets/images/icons/feature-1.png">
+          </div>
+          <div class="content">
+            <h2>INDUSTRIAL WORKS</h2>
+            <p>Lorem ipsum dolor sit amet, consec tetur adipisicing elit. Officia odio eum corporis consequatur.</p>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4 d-flex justify-content-center">
+          <div>
+            <img class="FourIcon" src="https://danslacuisinededede.com/kon/assets/images/icons/feature-2.png">
+          </div>
+          <div class="content">
+            <h2>CUTTING STRONG WOODS</h2>
+            <p>Lorem ipsum dolor sit amet, consec tetur adipisicing elit. Officia odio eum corporis consequatur.</p>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4 d-flex justify-content-center">
+          <div>
+            <img class="FourIcon" src="https://danslacuisinededede.com/kon/assets/images/icons/feature-3.png">
+          </div>
+          <div class="content">
+            <h2>PAINTING INDUSTRIAL WALS</h2>
+            <p>Lorem ipsum dolor sit amet, consec tetur adipisicing elit. Officia odio eum corporis consequatur.</p>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4 d-flex justify-content-center">
+          <div>
+            <img class="FourIcon" src="https://danslacuisinededede.com/kon/assets/images/icons/feature-4.png">
+          </div>
+          <div class="content">
+            <h2>MATERIAL RESIZEING</h2>
+            <p>Lorem ipsum dolor sit amet, consec tetur adipisicing elit. Officia odio eum corporis consequatur.</p>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4 d-flex justify-content-center">
+          <div>
+            <img class="FourIcon" src="https://danslacuisinededede.com/kon/assets/images/icons/feature-5.png">
+          </div>
+          <div class="content">
+            <h2>ROADS AND HIGHWAY REPAIR</h2>
+            <p>Lorem ipsum dolor sit amet, consec tetur adipisicing elit. Officia odio eum corporis consequatur.</p>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4 d-flex justify-content-center">
+          <div>
+            <img class="FourIcon" src="https://danslacuisinededede.com/kon/assets/images/icons/feature-6.png">
+          </div>
+          <div class="content">
+            <h2>BUILDING RENOVATE</h2>
+            <p>Lorem ipsum dolor sit amet, consec tetur adipisicing elit. Officia odio eum corporis consequatur.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="sectionFive">
+    <div class="container d-flex flex-column align-items-center">
+      <h1>Our Services</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, aperiam
+        ea eligendi consectetur et quas
+        ipsa impedit.</p>
+      <div class="row">
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card">
+            <img src="https://danslacuisinededede.com/kon/assets/images/service/service-1.jpg">
+            <h3>Building Construction</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore delectus odit assumenda ipsum vel
+              veritatis!</p>
+            <div class="FiveBottom">
+              <a href="#">Read More</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card">
+            <img src="https://danslacuisinededede.com/kon/assets/images/service/service-2.jpg">
+            <h3>Building Construction</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore delectus odit assumenda ipsum vel
+              veritatis!</p>
+            <div class="FiveBottom">
+              <a href="#">Read More</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card">
+            <img src="https://danslacuisinededede.com/kon/assets/images/service/service-3.jpg">
+            <h3>Building Construction</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore delectus odit assumenda ipsum vel
+              veritatis!</p>
+            <div class="FiveBottom">
+              <a href="#">Read More</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card">
+            <img src="https://danslacuisinededede.com/kon/assets/images/service/service-4.jpg">
+            <h3>Building Construction</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore delectus odit assumenda ipsum vel
+              veritatis!</p>
+            <div class="FiveBottom">
+              <a href="#">Read More</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card">
+            <img src="https://danslacuisinededede.com/kon/assets/images/service/service-5.jpg">
+            <h3>Building Construction</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore delectus odit assumenda ipsum vel
+              veritatis!</p>
+            <div class="FiveBottom">
+              <a href="#">Read More</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card">
+            <img src="https://danslacuisinededede.com/kon/assets/images/service/service-6.jpg">
+            <h3>Building Construction</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore delectus odit assumenda ipsum vel
+              veritatis!</p>
+            <div class="FiveBottom">
+              <a href="#">Read More</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card">
+            <img src="https://danslacuisinededede.com/kon/assets/images/service/service-7.jpg">
+            <h3>Building Construction</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore delectus odit assumenda ipsum vel
+              veritatis!</p>
+            <div class="FiveBottom">
+              <a href="#">Read More</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card">
+            <img src="https://danslacuisinededede.com/kon/assets/images/service/service-8.jpg">
+            <h3>Building Construction</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore delectus odit assumenda ipsum vel
+              veritatis!</p>
+            <div class="FiveBottom">
+              <a href="#">Read More</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card">
+            <img src="https://danslacuisinededede.com/kon/assets/images/service/service-9.jpg">
+            <h3>Building Construction</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore delectus odit assumenda ipsum vel
+              veritatis!</p>
+            <div class="FiveBottom">
+              <a href="#">Read More</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="sectionSix">
+    <div class="container">
+      <div class="row">
+        <div class="col-6 col-md-3 col-lg-3">
+          <img src="https://danslacuisinededede.com/kon/assets/images/icons/funfact-project.png">
+          <h1>598</h1>
+          <h4>Project</h4>
+        </div>
+        <div class="col-6 col-md-3 col-lg-3">
+          <img src="https://danslacuisinededede.com/kon/assets/images/icons/funfact-clients.png">
+          <h1>128</h1>
+          <h4>Clients</h4>
+        </div>
+        <div class="col-6 col-md-3 col-lg-3">
+          <img src="https://danslacuisinededede.com/kon/assets/images/icons/funfact-success.png">
+          <h1>144</h1>
+          <h4>Success</h4>
+        </div>
+        <div class="col-6 col-md-3 col-lg-3">
+          <img src="https://danslacuisinededede.com/kon/assets/images/icons/funfact-award.png">
+          <h1>109</h1>
+          <h4>Awards</h4>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="sectionSeven">
+    <div class="container">
+      <div class="row1">
+        <div class="col sevenText">
+          <h1>Working Projects</h1>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, aperiam ea eligendi consectetur et quas
+            ipsa impedit.</p>
+        </div>
+        <div class="sevenBox"></div>
+      </div>
+      <div class="row2 d-flex flex-wrap">
+        <div class="col sevenMenu d-flex justify-content-center flex-wrap">
+          <button class="menuBtn">Show All</button>
+          <button class="menuBtn">BUILDING</button>
+          <button class="menuBtn">INDUSTRIES</button>
+          <button class="menuBtn">CONSTRUCTION</button>
+          <button class="menuBtn">HOUSE REPAIR</button>
+        </div>
+      </div>
+      <div class="row3 d-flex flex-wrap">
+        <div class="col-12 col-md-6 col-lg-3">
+          <img src="https://danslacuisinededede.com/kon/assets/images/project/project-1.jpg">
+        </div>
+        <div class="col-12 col-md-6 col-lg-3">
+          <img src="https://danslacuisinededede.com/kon/assets/images/project/project-2.jpg">
+        </div>
+        <div class="col-12 col-md-6 col-lg-3">
+          <img src="https://danslacuisinededede.com/kon/assets/images/project/project-3.jpg">
+        </div>
+        <div class="col-12 col-md-6 col-lg-3">
+          <img src="https://danslacuisinededede.com/kon/assets/images/project/project-4.jpg">
+        </div>
+        <div class="col-12 col-md-6 col-lg-3">
+          <img src="https://danslacuisinededede.com/kon/assets/images/project/project-5.jpg">
+        </div>
+        <div class="col-12 col-md-6 col-lg-3">
+          <img src="https://danslacuisinededede.com/kon/assets/images/project/project-6.jpg">
+        </div>
+        <div class="col-12 col-md-6 col-lg-3">
+          <img src="https://danslacuisinededede.com/kon/assets/images/project/project-7.jpg">
+        </div>
+        <div class="col-12 col-md-6 col-lg-3">
+          <img src="https://danslacuisinededede.com/kon/assets/images/project/project-8.jpg">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="sectionEight">
+    <div class="container">
+      <div class="row1 d-flex flex-wrap">
+        <div class="col eightText">
+          <h1>Our Team</h1>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, aperiam ea eligendi consectetur et quas
+            ipsa impedit.</p>
+        </div>
+      </div>
+      <div class="row2 d-flex flex-wrap">
+        <div class="col-12 col-md-6 col-lg-3">
+          <div class="team">
+            <img src="https://danslacuisinededede.com/kon/assets/images/team/team-1.jpg">
+            <div class="eightContent">
+              <h3 class="title">Jonathan Scott</h3>
+              <span>CEO & Architech</span>
+              <a href="#">info@example.com</a>
+              <div class="social d-flex flex-wrap justify-content-center">
+                <a href="#" class="facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#" class="twitter"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#" class="linkedin"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="#" class="google"><i class="fa-brands fa-google-plus-g"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3">
+          <div class="team">
+            <img src="https://danslacuisinededede.com/kon/assets/images/team/team-2.jpg">
+            <div class="eightContent">
+              <h3 class="title">Benjamin Austin</h3>
+              <span>Chief Engineer</span>
+              <a href="#">info@example.com</a>
+              <div class="social d-flex flex-wrap justify-content-center">
+                <a href="#" class="facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#" class="twitter"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#" class="linkedin"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="#" class="google"><i class="fa-brands fa-google-plus-g"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3">
+          <div class="team">
+            <img src="https://danslacuisinededede.com/kon/assets/images/team/team-3.jpg">
+            <div class="eightContent">
+              <h3 class="title">John Oliver</h3>
+              <span>Project Manager</span>
+              <a href="#">info@example.com</a>
+              <div class="social d-flex flex-wrap justify-content-center">
+                <a href="#" class="facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#" class="twitter"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#" class="linkedin"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="#" class="google"><i class="fa-brands fa-google-plus-g"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3">
+          <div class="team">
+            <img src="https://danslacuisinededede.com/kon/assets/images/team/team-4.jpg">
+            <div class="eightContent">
+              <h3 class="title">Philip Alvarez</h3>
+              <span>Finanaces</span>
+              <a href="#">info@example.com</a>
+              <div class="social d-flex flex-wrap justify-content-center">
+                <a href="#" class="facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#" class="twitter"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#" class="linkedin"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="#" class="google"><i class="fa-brands fa-google-plus-g"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="sectionNine">
+    <div class="container">
+      <div class="row1 d-flex flex-wrap">
+        <div class="col-12">
+          <h1>What Clients Say</h1>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, aperiam ea eligendi consectetur et quas
+            ipsa impedit.</p>
+          <img src="https://danslacuisinededede.com/kon/assets/images/icons/quote-left.png">
+        </div>
+      </div>
+      <div class="row2">
+        <div class="col-12">
+          <div class="content1">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate nihil sed enim expedita suscipit minus
+              eum commodi adipisci earum veritatis, quidem laudantium officia quaerat iure maiores aut fugiat,
+              laboriosam officiis!
+            </p>
+            <h4>Teresa Perkins</h4>
+            <span>Consonant ASA Limited.</span>
+          </div>
+          <div class="content2 d-flex justify-content-center align-items-center">
+            <img src="https://danslacuisinededede.com/kon/assets/images/author/author-4.jpg" class="img1">
+            <img src="https://danslacuisinededede.com/kon/assets/images/author/author-1.jpg" class="img2">
+            <img src="https://danslacuisinededede.com/kon/assets/images/author/author-2.jpg" class="img3">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="sectionTen">
+    <div class="container">
+      <div class="row1 d-flex flex-wrap">
+        <div class="col tenText">
+          <h1>Latest Blog</h1>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, aperiam ea eligendi consectetur et quas
+            ipsa impedit.</p>
+        </div>
+      </div>
+      <div class="row2 d-flex justify-content-center">
+        <div class="card col-12 col-md-6">
+          <img src="https://danslacuisinededede.com/kon/assets/images/blog/blog-1.jpg">
+          <h3>By Admin - 30 October 2018</h3>
+          <p>What are Groundworkers and what do they do?</p>
+        </div>
+        <div class="card col-12 col-md-6">
+          <img src="https://danslacuisinededede.com/kon/assets/images/blog/blog-2.jpg">
+          <h3>By Admin - 30 October 2018</h3>
+          <p>What's really delaying the 15.4bn mega-project</p>
+        </div>
+        <div class="card col-12 col-md-6">
+          <img src="https://danslacuisinededede.com/kon/assets/images/blog/blog-3.jpg">
+          <h3>By Admin - 30 October 2018</h3>
+          <p>How much space does a house wall take up in sq ft?</p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div id="sectionEleven">
+    <div class="container">
+      <div class="row flex-wrap">
+        <div class="col-6 col-md-3 col-lg-3">
+          <img src="https://danslacuisinededede.com/kon/assets/images/brands/brand-1.png">
+        </div>
+        <div class="col-6 col-md-3 col-lg-3">
+          <img src="https://danslacuisinededede.com/kon/assets/images/brands/brand-2.png">
+        </div>
+        <div class="col-6 col-md-3 col-lg-3">
+          <img src="https://danslacuisinededede.com/kon/assets/images/brands/brand-3.png">
+        </div>
+        <div class="col-6 col-md-3 col-lg-3">
+          <img src="https://danslacuisinededede.com/kon/assets/images/brands/brand-4.png">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="footer">
+    <div id="footerTop">
+      <div class="container">
+        <div class="row">
+          <div class="topOne col-12 col-md-6 col-lg-3">
+            <div class="footerLogo">
+              <a href="index.html">
+                <img src="	https://danslacuisinededede.com/kon/assets/images/logo-white.png">
+              </a>
+            </div>
+            <div class="footerSocial d-flex">
+              <a href="#" class="facebook"><i class="fa-brands fa-facebook-f"></i></a>
+              <a href="#" class="twitter"><i class="fa-brands fa-twitter"></i></a>
+              <a href="#" class="linkedin"><i class="fa-brands fa-linkedin-in"></i></a>
+              <a href="#" class="google"><i class="fa-brands fa-google-plus-g"></i></a>
+              <a href="#" class="pinterest"><i class="fa-brands fa-pinterest-p"></i></a>
+            </div>
+          </div>
+          <div class="topTwo col-12 col-md-6 col-lg-3">
+            <h4 class="title">
+              Contact Us</h4>
+            <ul>
+              <li>
+                <i class="fa-solid fa-location-dot"></i>
+                <span>256, 1st AVE, Manchester 125 , Noth England</span>
+              </li>
+              <li>
+                <i class="fa-solid fa-phone"></i>
+                <span>
+                  <a href="#">+012 345 678 102</a>
+                  <a href="#">+012 345 678 101</a>
+                </span>
+              </li>
+              <li>
+                <i class="fa-regular fa-envelope"></i>
+                <span>
+                  <a href="#">info@example.com</a>
+                  <a href="#">www.example.com</a>
+                </span>
+              </li>
+            </ul>
+          </div>
+          <div class="topThree col-12 col-md-6 col-lg-3">
+            <h4 class="title">
+              Instagram Feed</h4>
+            <ul class="d-flex flex-wrap">
+              <li class="d-flex">
+                <a href="#">
+                  <img src="https://danslacuisinededede.com/kon/assets/images/project/project-1.jpg">
+                </a>
+              </li>
+              <li class="d-flex">
+                <a href="#">
+                  <img src="https://danslacuisinededede.com/kon/assets/images/project/project-2.jpg">
+                </a>
+              </li>
+              <li class="d-flex">
+                <a href="#">
+                  <img src="https://danslacuisinededede.com/kon/assets/images/project/project-3.jpg">
+                </a>
+              </li>
+              <li class="d-flex">
+                <a href="#">
+                  <img src="https://danslacuisinededede.com/kon/assets/images/project/project-4.jpg">
+                </a>
+              </li>
+              <li class="d-flex">
+                <a href="#">
+                  <img src="https://danslacuisinededede.com/kon/assets/images/project/project-5.jpg">
+                </a>
+              </li>
+              <li class="d-flex">
+                <a href="#">
+                  <img src="https://danslacuisinededede.com/kon/assets/images/project/project-6.jpg">
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="topFour col-12 col-md-6 col-lg-3">
+            <h4 class="title">About Us</h4>
+            <p>
+              Konstructo- Construction Bootstrap 5 Templatethe best theme for elit, sed do to eiumod tempor dolor sit
+              amet, ctetur adipiscing elit seddo dolor sit amet.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="footerbottom">
+
+    </div>
+  </div>
+
+  <script src="./js/bootstrap.bundle.min.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+  <script>
+    /* ========
+Debugger plugin, simple demo plugin to console.log some of callbacks
+======== */
+    function myPlugin({ swiper, extendParams, on }) {
+      extendParams({
+        debugger: false,
+      });
+
+      on('init', () => {
+        if (!swiper.params.debugger) return;
+        console.log('init');
+      });
+      on('click', (swiper, e) => {
+        if (!swiper.params.debugger) return;
+        console.log('click');
+      });
+      on('tap', (swiper, e) => {
+        if (!swiper.params.debugger) return;
+        console.log('tap');
+      });
+      on('doubleTap', (swiper, e) => {
+        if (!swiper.params.debugger) return;
+        console.log('doubleTap');
+      });
+      on('sliderMove', (swiper, e) => {
+        if (!swiper.params.debugger) return;
+        console.log('sliderMove');
+      });
+      on('slideChange', () => {
+        if (!swiper.params.debugger) return;
+        console.log(
+          'slideChange',
+          swiper.previousIndex,
+          '->',
+          swiper.activeIndex
+        );
+      });
+      on('slideChangeTransitionStart', () => {
+        if (!swiper.params.debugger) return;
+        console.log('slideChangeTransitionStart');
+      });
+      on('slideChangeTransitionEnd', () => {
+        if (!swiper.params.debugger) return;
+        console.log('slideChangeTransitionEnd');
+      });
+      on('transitionStart', () => {
+        if (!swiper.params.debugger) return;
+        console.log('transitionStart');
+      });
+      on('transitionEnd', () => {
+        if (!swiper.params.debugger) return;
+        console.log('transitionEnd');
+      });
+      on('fromEdge', () => {
+        if (!swiper.params.debugger) return;
+        console.log('fromEdge');
+      });
+      on('reachBeginning', () => {
+        if (!swiper.params.debugger) return;
+        console.log('reachBeginning');
+      });
+      on('reachEnd', () => {
+        if (!swiper.params.debugger) return;
+        console.log('reachEnd');
+      });
+    }
+  </script>
+
+  <script>
+    // Init Swiper
+    var swiper = new Swiper('.swiper', {
+      // Install Plugin To Swiper
+      modules: [myPlugin],
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      // Enable debugger
+      debugger: true,
+    });
+  </script>
+
+
+</body>
+
+</html>
